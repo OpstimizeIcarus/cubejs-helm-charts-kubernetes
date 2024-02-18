@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cube-api
+  labels:
+    {{- include "chart.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.cubeApi.service.type }}
+  ports:
+    - port: {{ .Values.cubeApi.service.service_port }}
+      targetPort: {{ .Values.cubeApi.service.port }}
+      protocol: TCP
+      name: http
+  selector:
+    cubejsApp: cubeApi

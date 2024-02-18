@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  {{- range $key, $val := .Values.cubestoreWorker.env.var }}
+  {{ $key }}: {{ $val | quote }}
+  {{- end}}
+
+kind: "ConfigMap"
+metadata:
+  name: {{ .Values.cubestoreWorker.configmap.name }}
+  namespace: {{ .Values.namespace }}

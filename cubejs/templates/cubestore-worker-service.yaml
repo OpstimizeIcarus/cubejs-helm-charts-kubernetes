@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cubestore-worker
+  labels:
+    {{- include "chart.labels" . | nindent 4 }}
+spec:
+  clusterIP: None
+  ports:
+    - port: {{ .Values.cubestoreWorker.service.service_port }}
+      targetPort: {{ .Values.cubestoreWorker.service.port }}
+      protocol: TCP
+      name: http
+  selector:
+    cubejsApp: cubestoreWorker
