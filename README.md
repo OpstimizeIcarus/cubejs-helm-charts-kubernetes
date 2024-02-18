@@ -1,5 +1,6 @@
 # cubejs-helm-charts-kubernetes
 This repo contains the HELM charts for deploying the [**CubeJS**](https://cube.dev/) in Kubernetes clusters.   
+![Untitled (500 x 300 px) (1)](https://github.com/OpstimizeIcarus/cubejs-helm-charts-kubernetes/assets/144666848/a0cf05e3-4425-4745-a68a-5c60e824faf5)
 
 ## Abstract
 Deplyogint the cubejs stack is nothing but deploying all of its components. 
