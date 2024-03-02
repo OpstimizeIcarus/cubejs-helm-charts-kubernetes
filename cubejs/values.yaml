@@ -48,7 +48,7 @@ securityContext: {}
   # runAsUser: 1000
 
 cubeApi:
-  image: "cubejs/cubes:latest"
+  image: "cubejs/cube:latest"
   pullPolicy: Always
   service:
     type: ClusterIP
@@ -71,7 +71,7 @@ cubeApi:
       CUBEJS_LOG_LEVEL: "trace"
 
 cubeRefreshWorker:
-  image: "cubejs/cubes:latest"
+  image: "cubejs/cube:latest"
   pullPolicy: Always
   service:
     type: ClusterIP
